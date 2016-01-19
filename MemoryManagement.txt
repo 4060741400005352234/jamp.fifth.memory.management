@@ -1,0 +1,24 @@
+1) jstat -gccapacity PID
+1,2.
+-Xms128m -Xmx512m -XX:NewRatio=1 -XX:SurvivorRatio=3
+
+ NGCMN    NGCMX     NGC      S0C      S1C       EC         OGCMN      OGCMX       OGC        OC       PGCMN    PGCMX     PGC      PC        YGC   FGC
+ 65536.0  262144.0  65536.0  12800.0  12800.0   39936.0    65536.0    262144.0    65536.0    65536.0  21504.0  83968.0   21504.0  21504.0   0     0
+
+3. 
+-Xmx512m -XX:OldSize=128m -XX:SurvivorRatio=3
+
+ NGCMN    NGCMX     NGC      S0C      S1C       EC        OGCMN      OGCMX       OGC         OC        PGCMN    PGCMX     PGC      PC        YGC   FGC
+ 87040.0  175104.0  87040.0  17408.0  17408.0   52224.0   131072.0   349184.0    131072.0    131072.0  21504.0  83968.0   21504.0  21504.0   0     0
+ 
+4.
+-XX:OldSize=128m -XX:NewSize=384m -XX:SurvivorRatio=3
+
+ NGCMN     NGCMX      NGC       S0C     S1C       EC         OGCMN      OGCMX       OGC         OC        PGCMN    PGCMX     PGC      PC       YGC   FGC
+ 393216.0  1390592.0  393216.0  78336.0 78336.0   236544.0   131072.0   2781184.0   131072.0    131072.0  21504.0  83968.0   21504.0  21504.0  0     0
+ 
+5.
+-XX:OldSize=128m -XX:NewSize=640m -XX:SurvivorRatio=3 -Xss1m
+
+ NGCMN    NGCMX     NGC      S0C      S1C       EC         OGCMN      OGCMX       OGC        OC        PGCMN    PGCMX     PGC      PC        YGC   FGC
+ 655360.0 1390592.0 655360.0 131072.0 131072.0  393216.0   131072.0   2781184.0   131072.0   131072.0  21504.0  83968.0   21504.0  21504.0   0     0
