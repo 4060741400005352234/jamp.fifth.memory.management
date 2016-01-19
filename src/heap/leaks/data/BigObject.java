@@ -2,15 +2,15 @@ package heap.leaks.data;
 
 public class BigObject {
 
-    private long[] longArray;
+    private long[] longArray = new long[10];
     private BigObject bigObject;
+    private long arrSize;
 
     public BigObject() {
-        longArray = new long[100];
     }
 
     public BigObject(BigObject bigObject) {
-        longArray = new long[100];
         this.bigObject = bigObject;
+        arrSize = longArray.length;
     }
 }
