@@ -10,7 +10,7 @@ public class StackOverflowExample {
         private B bInstance = null;
 
         public A() throws InterruptedException {
-            Thread.sleep(500);
+            Thread.currentThread().sleep(500);
             bInstance = new B();
         }
     }
