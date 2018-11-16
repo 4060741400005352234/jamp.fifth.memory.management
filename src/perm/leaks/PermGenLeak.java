@@ -22,6 +22,7 @@ public class PermGenLeak {
             if(i % 50 == 0) {
                 System.out.println(clazz);
                 System.out.println(clazz);
+                System.out.println(clazz);
             }
         }
     }
