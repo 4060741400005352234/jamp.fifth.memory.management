@@ -21,6 +21,7 @@ public class PermGenLeak {
             Class clazz = generate("jamp.perm.leak.Generated" + i);
             if(i % 50 == 0) {
                 System.out.println(clazz);
+                System.out.println(clazz);
             }
         }
     }
