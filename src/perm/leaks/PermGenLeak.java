@@ -35,6 +35,7 @@ public class PermGenLeak {
                 System.out.println(clazz); // m
 
                 System.out.println(clazz); // ff
+                System.out.println(clazz); // ff
             }
         }
     }
